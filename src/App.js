@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import './app_styles.css'
+import ControlledTabs from "./tabs";
+import { Routes, Route, Link} from "react-router-dom";
+import CreatePage from "./CreatePage";
+import YourPage from "./YourPage"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const App = () => {
+    return (
+        <Routes>
+            <Route path="/" element={<CreatePage/>}/>
+            <Route path="/yourpage" element={<YourPage/>}/>
+        </Routes>
+    );
+};
 
 export default App;

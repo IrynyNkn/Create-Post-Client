@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Merienda', cursive;
+}
+
+html,
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 5px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+    'aside header'
+    'aside main'
+    'footer footer';
+
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 20% auto 20%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(222, 164, 245);
+    grid-area: header;
+}
+
+aside {
+    background-color: rgb(163, 150, 233);
+    grid-area: aside;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.sideText {
+    flex: 1;
+    display: grid;
+    justify-content: center;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+    'inHeader inAside'
+    'inMain inAside';
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 80px auto;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: darkgreen;
+}
+
+.inHeader {
+    padding: 0 10px;
+    grid-area: inHeader;
+    background-color: rgb(241, 221, 153);
+    display: grid;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.inHeader h2 {
+    text-align: end;
+    margin: 0;
+}
+
+.inAside {
+    grid-area: inAside;
+    background-color: rgb(233, 169, 169);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.inMain {
+    grid-area: inMain;
+    background-color: rgb(168, 231, 200);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.picWrap {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBox {
+    font-weight: 600;
+    font-size: 1em;
+    background-color: powderblue;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.contentBox__text {
+    display: inline;
+}
+
+.pic--hidden {
+    visibility: hidden;
+}
+
+.btn {
+    justify-self: center;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: powderblue;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.picture {
+    width: 60%;
+    justify-self: center;
+}
+
+.contentBox__icon {
+    font-size: 24px;
+    color: blueviolet;
+}
+
+.inMain__pic {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(221, 217, 153);
+    grid-area: footer;
+}
+
+footer div:last-child {
+    padding: 0 10px;
+}
+
+.sideText__content,
+.footer__content {
+    border: 3px solid black;
+    padding: 5px;
+}
+
+@media (max-width: 600px) {
+    aside {
+        padding: 5px;
+    }
+    .inMain {
+        padding: 0;
+    }
+    .inAside {
+        padding: 5px;
+    }
+    ul {
+        padding: 0;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .menu {
+        font-size: 20px;
+    }
+    li {
+        font-size: 14px;
+    }
+    .contentBox {
+        font-size: 0.6em;
+    }
+    .contentBox__icon {
+        font-size: 16px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__input {
+    flex: 1;
+    margin-left: 5px;
+    text-align: center;
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(220, 250, 236);
+}
+
+.form__containerInput {
+    width: 80%;
+    display: flex;
+}
+
+.form__containerSubmit {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.form__btn {
+    font-size: 16px;
+    padding: 5px 25px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(71, 128, 101);
+}
+
+.infoBox {
+    text-align: center;
+    text-align: center;
+    background-color: rgb(220, 250, 236);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.formPositioning {
+    display: block;
+}
+
+.inAside-img {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.inAside__img {
+    width: 50%;
+}

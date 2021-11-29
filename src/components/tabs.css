@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+
+.container {
+
+}
+
+.tabPanel{
+    display: flex;
+}
+
+.tab{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 2px solid black;
+}
+
+.tab--active{
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid black;
+    border-bottom: none;
+}
+
+.tab__content{
+    display: none;
+}
+
+.tab__content--active{
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.wrapper{
+    display: grid;
+    grid-template-areas: 'content photo';
+    grid-template-columns: 2fr 3fr;
+}
+
+.tab__info{
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab__photo{
+    grid-area: photo;
+}
+
+.tab__photo img {
+    width: 100%;
+}
+
+.tab__title{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.tab__post{
+    flex: 1;
+    padding-top: 10px;
+}
+
+.tab__author{
+    font-size: 14px;
+}
+
+.tab__btn{
+    padding: 5px 15px;
+    width: fit-content;
+    border: none;
+    border-radius: 5px;
+}
+
+.tab__delete{
+    background-color: #d7ecd9;
+    margin-right: 5px;
+}
+
+.tab__delete:hover {
+    background-color: #a2c7a7;
+}
