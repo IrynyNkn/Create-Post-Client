@@ -16,6 +16,8 @@ const TabContent = ({posts, toggleActive, setToggleActive}) => {
         setToggleActive(0);
     }
 
+
+
     return (
         posts.map((post, index) => (
             <div key={index} className={`tab__content ${index === toggleActive ? 'tab__content--active' : ''}`}>

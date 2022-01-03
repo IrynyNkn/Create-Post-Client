@@ -1,0 +1,58 @@
+.container{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.anim-container{
+    width: 100%;
+    flex: 1 auto;
+    border: 5px solid seagreen;
+    box-sizing: border-box;
+}
+.controls{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.controls>div{
+    width: 50%;
+}
+.button{
+    padding: 5px 15px;
+    margin: 5px;
+    background-color: #a2c7a7;
+    border: none;
+    border-radius: 10px;
+}
+.anim-js-container{
+    position: relative;
+}
+.ball--red{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 160px
+}
+.ball--yellow{
+    left: 360px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    /*bottom: 0;*/
+}
+#canvas{
+    background: url('texture.jpg') repeat;
+}
+.controls__btns{
+    display: flex;
+}
+/*#canvas{*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
